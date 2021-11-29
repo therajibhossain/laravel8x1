@@ -13,8 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () {    
     return view('welcome');
+});
+
+Route::get('/sum', function(){
+    return Calculator::sum(10, 15);
+});
+
+Route::get('/substract', function(){
+    return Calculator::substract(15, 10);
 });
 
 Route::get('/dashboard', function () {
